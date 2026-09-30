@@ -29,10 +29,6 @@ File CSV harus berada di folder yang sama dengan notebook karena dibaca dengan p
    - Cluster 1: area semi-urban, heat index tertinggi, literasi lebih rendah.
    - Cluster 2: area berkepadatan rendah dan lebih sejuk.
 
-## Catatan Versi Pandas
-
-`requirements.txt` membatasi pandas di bawah versi 3.0. Notebook memakai pola `df[col].fillna(..., inplace=True)` dan `select_dtypes(include='object')`. Di pandas 3.0, pola pertama tidak lagi mengubah DataFrame asli dan pola kedua tidak lagi menangkap kolom string, sehingga nilai kosong tidak terisi dan kolom kategorikal tidak terproses. Jangan naikkan versi pandas kecuali kode diperbarui.
-
 ## Keterbatasan
 
 - `KMeans` pada tahap tuning tidak diberi `random_state`, sehingga kurva elbow dan silhouette bisa sedikit berbeda tiap run.
